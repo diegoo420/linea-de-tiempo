@@ -1,5 +1,5 @@
 
-/* Estilos Globales */
+/* 1. Estilos Globales */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,7 +28,7 @@ p { margin-bottom: 1rem; }
 a { text-decoration: none; }
 
 
-/* 2. Clases de Utilidad (Contenedores) */
+/* 2. Contenedores */
 .container {
   max-width: 72rem; 
   margin-left: auto;
@@ -53,17 +53,105 @@ a { text-decoration: none; }
   margin-bottom: 2rem; 
 }
 
-.button-link {
+
+.button-link-fortran {
+  display: inline-block;
+  background-color: #5a3f75;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
   cursor: pointer;
-  background: none;
-  border: none;
-  color: #2563eb;
-  text-decoration: underline;
-  font-size: 1rem;
   font-family: inherit;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
 }
-.button-link:hover {
-  color: #1d4ed8;
+.button-link-fortran:hover{
+  background-color: #423054;
+  color: #ffffff;
+}
+
+.button-link-c {
+  display: inline-block;
+  background-color: #2C5282;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+.button-link-c:hover{
+  background-color: #1e3857;
+  color: #ffffff;
+}
+
+.button-link-python {
+  display: inline-block;
+  background-color: #2D3748;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+.button-link-python:hover{
+  background-color: #1c222c;
+  color: #ffffff;
+}
+
+.button-link-java {
+  display: inline-block;
+  background-color: #1A365D;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+.button-link-java:hover{
+  background-color: #11233c;
+  color: #ffffff;
+}
+
+.button-link-javascript {
+  display: inline-block;
+  background-color: #c1a722;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  transition: background-color 0.2s ease-in-out;
+}
+.button-link-javascript:hover{
+  background-color: #8f7b1a;
+  color: #ffffff;
 }
 
 
@@ -126,15 +214,29 @@ a { text-decoration: none; }
   margin-bottom: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  color: white; 
+  overflow: hidden;
+  position: relative;
+  padding: 1rem;
 }
 .timeline-circle:hover {
   transform: scale(1.1);
 }
-.timeline-circle span {
-  text-align: center;
-  font-size: 1.5rem;
+.timeline-circle img {
+  max-width: 65%;
+  max-height: 65%;
+  object-fit: contain;
+  display: block;
+}
+
+.año {
+  position: absolute;
+  right: 22%;
+  top: 5%;
+  transform: translate(-50%);
+  color: white;
+  font-size: 1.25rem;
   font-weight: 600;
+  opacity: 1.7;
 }
 
 .timeline-card {
@@ -196,7 +298,7 @@ a { text-decoration: none; }
 /* 4. Estilos de la Vista "Páginas" */
 .page-nav {
   background-color: white;
-  padding: 1rem 1.5rem;
+  padding: 1.5rem 1rem;
   border-bottom: 1px solid #e5e7eb;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
@@ -312,31 +414,31 @@ a { text-decoration: none; }
 /* 5. Estilos Específicos por Lenguaje */
 
 /* FORTRAN */
-#page-fortran .lang-header { background: linear-gradient(to right, #4a5568, #2d3748); }
+#page-fortran .lang-header { background: linear-gradient(to right, #5a3f75, #835cab); }
 #page-fortran .feature-box { border-color: #4a5568; }
 #page-fortran .usage-list li::before { color: #4a5568; }
 #page-fortran .note-box { border-color: #60a5fa; background-color: #eff6ff; }
 
 /* C */
-#page-c .lang-header { background: linear-gradient(to right, #3b82f6, #1e3a8a); }
+#page-c .lang-header { background: linear-gradient(to right, #2C5282, rgb(39, 75, 173)); }
 #page-c .feature-box { border-color: #3b82f6; }
 #page-c .usage-list li::before { color: #3b82f6; }
 #page-c .note-box { border-color: #60a5fa; background-color: #eff6ff; }
 
 /* Python */
-#page-python .lang-header { background: linear-gradient(to right, #475569, #1e293b); }
+#page-python .lang-header { background: linear-gradient(to right, #1e293b ,#475569); }
 #page-python .feature-box { border-color: #475569; }
 #page-python .usage-list li::before { color: #475569; }
 #page-python .note-box { border-color: #60a5fa; background-color: #eff6ff; }
 
 /* Java */
-#page-java .lang-header { background: linear-gradient(to right, #1d4ed8, #1e1b4b); }
+#page-java .lang-header { background: linear-gradient(to right, #1A365D, #2d5d9f); }
 #page-java .feature-box { border-color: #1d4ed8; }
 #page-java .usage-list li::before { color: #1d4ed8; }
 #page-java .note-box { border-color: #60a5fa; background-color: #eff6ff; }
 
 /* JavaScript */
-#page-javascript .lang-header { background: linear-gradient(to right, #0d9488, #134e4a); }
+#page-javascript .lang-header { background: linear-gradient(to right, #c1a722, #ffdb25); }
 #page-javascript .feature-box { border-color: #0d9488; }
 #page-javascript .usage-list li::before { color: #0d9488; }
 #page-javascript .note-box { border-color: #60a5fa; background-color: #eff6ff; }
