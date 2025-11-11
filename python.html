@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de Python</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-python">
+
+  <nav class="page-nav">
+    <div class="container-small">
+      <a href="index.html" class="back-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+        <span>Volver a la Línea del Tiempo</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="page-content container-small">
+    <div class="lang-header">
+      <div>
+        <h1>Python</h1>
+        <p>Simplicidad y legibilidad</p>
+      </div>
+      <div class="year">1991</div>
+    </div>
+    <section class="card">
+      <h2>Historia</h2>
+      <p><strong>Creador:</strong> Guido van Rossum</p>
+      <p>Python fue concebido a finales de los años 80 y su implementación comenzó en diciembre de 1989 por Guido van Rossum en los Países Bajos. Van Rossum quería crear un lenguaje que fuera fácil de leer y escribir, con una sintaxis limpia que priorizara la legibilidad del código.</p>
+      <p>El nombre "Python" viene del grupo de comedia británico Monty Python, del cual van Rossum era fan. Desde su inicio, Python enfatizó la filosofía de que el código se lee más veces de las que se escribe, por lo que debe ser claro y expresivo.</p>
+      <p>Con los años, Python ha crecido hasta convertirse en uno de los lenguajes más populares del mundo, especialmente en áreas como ciencia de datos, inteligencia artificial, automatización y desarrollo web.</p>
+    </section>
+    <section class="card">
+      <h2>Características Principales</h2>
+      <div class="features-grid">
+        <div class="feature-box"><h3>Sintaxis Simple</h3><p>Código limpio y fácil de leer, usa indentación en lugar de llaves</p></div>
+        <div class="feature-box"><h3>Tipado Dinámico</h3><p>No necesitas declarar tipos de variables explícitamente</p></div>
+        <div class="feature-box"><h3>Multiparadigma</h3><p>Soporta programación orientada a objetos, funcional y procedural</p></div>
+        <div class="feature-box"><h3>Bibliotecas Extensas</h3><p>Enorme ecosistema de paquetes para casi cualquier tarea</p></div>
+        <div class="feature-box"><h3>Interpretado</h3><p>Ejecuta código línea por línea, facilitando la depuración</p></div>
+        <div class="feature-box"><h3>Multiplataforma</h3><p>Funciona en Windows, Mac, Linux y muchos otros sistemas</p></div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>¿Para qué se usa?</h2>
+      <ul class="usage-list">
+        <li><span><strong>Ciencia de datos y análisis:</strong> Pandas, NumPy, Matplotlib para análisis de datos</span></li>
+        <li><span><strong>Inteligencia artificial y machine learning:</strong> TensorFlow, PyTorch, scikit-learn</span></li>
+        <li><span><strong>Desarrollo web:</strong> Django, Flask para crear aplicaciones web</span></li>
+        <li><span><strong>Automatización y scripting:</strong> Automatizar tareas repetitivas</span></li>
+        <li><span><strong>Desarrollo de videojuegos:</strong> Pygame para juegos 2D</span></li>
+        <li><span><strong>Testing y DevOps:</strong> Automatización de pruebas y despliegues</span></li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Ejemplo de Código</h2>
+      <p>Un ejemplo que muestra la simplicidad de Python con listas y funciones:</p>
+      <div class="code-example">
+        <pre>
+# Función para calcular números de Fibonacci
+def fibonacci(n):
+    """Retorna los primeros n números de Fibonacci"""
+    fib = [0, 1]
+    for i in range(2, n):
+        fib.append(fib[i-1] + fib[i-2])
+    return fib[:n]
+
+# Uso de la función
+numeros = fibonacci(10)
+print(f"Los primeros 10 números de Fibonacci:")
+print(numeros)
+
+# List comprehension (característica única de Python)
+cuadrados = [x**2 for x in range(1, 6)]
+print(f"Cuadrados: {cuadrados}")
+        </pre>
+      </div>
+      <div class="note-box">
+        <p><strong>Nota:</strong> Observe cómo Python usa indentación en lugar de llaves para definir bloques de código, lo que hace que el código sea más limpio y legible. Las comprehensions de listas son una característica única que permite crear listas de forma concisa y expresiva.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

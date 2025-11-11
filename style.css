@@ -1,0 +1,356 @@
+/* --- INICIO: ESTILOS CSS --- */
+
+/* 1. Reset Básico y Estilos Globales */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(to bottom right, #f8fafc, #e0f2fe);
+  color: #334155;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.25rem; font-weight: 600; }
+h4 { font-size: 1.1rem; font-weight: 600; }
+
+p { margin-bottom: 1rem; }
+a { text-decoration: none; }
+
+/* 2. Clases de Utilidad (Contenedores) */
+.container {
+  max-width: 72rem; /* 1152px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;  /* 24px */
+  padding-right: 1.5rem; /* 24px */
+}
+
+.container-small {
+  max-width: 56rem; /* 896px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 0.75rem; /* 12px */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  padding: 2rem; /* 32px */
+  margin-bottom: 2rem; /* 32px */
+}
+
+.button-link {
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #2563eb;
+  text-decoration: underline;
+  font-size: 1rem;
+  font-family: inherit;
+}
+.button-link:hover {
+  color: #1d4ed8;
+}
+
+/* 3. Estilos de la Vista "Home" */
+.home-header {
+  text-align: center;
+  padding: 3rem 1.5rem;
+}
+.home-header h1 {
+  margin-bottom: 1rem;
+}
+.home-header p {
+  max-width: 48rem; /* 768px */
+  margin: 0 auto;
+  color: #475569;
+  font-size: 1.1rem;
+}
+
+.timeline-container {
+  position: relative;
+  padding-bottom: 5rem;
+}
+
+/* La línea del tiempo (solo visible en escritorio) */
+.timeline-line {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 5rem; /* Altura del círculo / 2 */
+  height: 4px;
+  background: linear-gradient(to right, #d1d5db, #60a5fa, #2dd4bf);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.timeline-grid {
+  position: relative;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.timeline-circle {
+  width: 10rem; /* 160px */
+  height: 10rem; /* 160px */
+  border-radius: 9999px; /* fully rounded */
+  border: 4px solid white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  color: white; /* El color se hereda al 'a' */
+}
+.timeline-circle:hover {
+  transform: scale(1.1);
+}
+.timeline-circle span {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.timeline-card {
+  display: block; /* Convertido en bloque para el 'a' tag */
+  background: white;
+  border-radius: 0.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+  color: #334155;
+}
+.timeline-card:hover {
+  border-color: #60a5fa;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+}
+.timeline-card h3 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+
+.info-section {
+  background-color: #ffffff;
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  margin-top: 4rem;
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.info-box {
+  background-color: #f8fafc;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+.info-box h4 {
+  color: #1e293b;
+  margin-bottom: 0.5rem;
+}
+.info-box p {
+  color: #475569;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+/* 4. Estilos de la Vista "Páginas" */
+.page-nav {
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #475569;
+  font-size: 1rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.back-button:hover {
+  color: #1e293b;
+}
+.back-button svg {
+  width: 20px;
+  height: 20px;
+}
+
+.page-content {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.lang-header {
+  color: white;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.lang-header h1 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+.lang-header p {
+  color: #e2e8f0;
+  margin: 0;
+}
+.lang-header .year {
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0.8;
+  text-align: right;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.feature-box {
+  background-color: #f8fafc;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left-width: 4px;
+}
+.feature-box h3 {
+  margin-bottom: 0.5rem;
+}
+.feature-box p {
+  color: #475569;
+  margin-bottom: 0;
+  font-size: 0.9rem;
+}
+
+.usage-list {
+  list-style: none;
+}
+.usage-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.usage-list li::before {
+  content: "•";
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: -0.25rem;
+}
+
+.code-example {
+  background-color: #1e293b;
+  color: #93c5fd;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+}
+
+.code-example pre {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.875rem;
+  white-space: pre-wrap;
+}
+
+.note-box {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border-left-width: 4px;
+}
+
+/* 5. Estilos Específicos por Lenguaje */
+
+/* FORTRAN */
+#page-fortran .lang-header { background: linear-gradient(to right, #4a5568, #2d3748); }
+#page-fortran .feature-box { border-color: #4a5568; }
+#page-fortran .usage-list li::before { color: #4a5568; }
+#page-fortran .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+
+/* C */
+#page-c .lang-header { background: linear-gradient(to right, #3b82f6, #1e3a8a); }
+#page-c .feature-box { border-color: #3b82f6; }
+#page-c .usage-list li::before { color: #3b82f6; }
+#page-c .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+
+/* Python */
+#page-python .lang-header { background: linear-gradient(to right, #475569, #1e293b); }
+#page-python .feature-box { border-color: #475569; }
+#page-python .usage-list li::before { color: #475569; }
+#page-python .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+
+/* Java */
+#page-java .lang-header { background: linear-gradient(to right, #1d4ed8, #1e1b4b); }
+#page-java .feature-box { border-color: #1d4ed8; }
+#page-java .usage-list li::before { color: #1d4ed8; }
+#page-java .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+
+/* JavaScript */
+#page-javascript .lang-header { background: linear-gradient(to right, #0d9488, #134e4a); }
+#page-javascript .feature-box { border-color: #0d9488; }
+#page-javascript .usage-list li::before { color: #0d9488; }
+#page-javascript .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+
+
+/* 6. Media Queries (Responsivo) */
+@media (min-width: 768px) { /* md */
+  .timeline-line {
+    display: block;
+  }
+  .timeline-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+  .info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

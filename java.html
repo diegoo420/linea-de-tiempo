@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de Java</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-java">
+
+  <nav class="page-nav">
+    <div class="container-small">
+      <a href="index.html" class="back-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+        <span>Volver a la Línea del Tiempo</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="page-content container-small">
+    <div class="lang-header">
+      <div>
+        <h1>Java</h1>
+        <p>Write once, run anywhere</p>
+      </div>
+      <div class="year">1995</div>
+    </div>
+    <section class="card">
+      <h2>Historia</h2>
+      <p><strong>Creador:</strong> James Gosling y su equipo en Sun Microsystems</p>
+      <p>Java fue desarrollado originalmente como parte del proyecto "Green" en Sun Microsystems, comenzando en 1991. Inicialmente se llamaba "Oak" (roble en inglés), pero el nombre fue cambiado a Java por razones de marca registrada.</p>
+      <p>El objetivo original era crear un lenguaje para programar dispositivos electrónicos de consumo como televisores y tostadoras. Sin embargo, cuando explotó la web a mediados de los 90, Java encontró su verdadero propósito: crear aplicaciones portables para internet.</p>
+      <p>La promesa de Java era revolucionaria: "Write once, run anywhere" (escribe una vez, ejecuta en cualquier lugar). Esto significa que el código Java puede ejecutarse en cualquier dispositivo que tenga una Máquina Virtual Java (JVM), sin necesidad de recompilarlo.</p>
+      <p>Java se convirtió en uno de los lenguajes más utilizados del mundo, especialmente en aplicaciones empresariales, aplicaciones Android y sistemas de backend.</p>
+    </section>
+    <section class="card">
+      <h2>Características Principales</h2>
+      <div class="features-grid">
+        <div class="feature-box"><h3>Orientado a Objetos</h3><p>Todo en Java es un objeto (excepto tipos primitivos), promoviendo código modular</p></div>
+        <div class="feature-box"><h3>Independencia de Plataforma</h3><p>El bytecode de Java se ejecuta en la JVM, funcionando en cualquier sistema</p></div>
+        <div class="feature-box"><h3>Recolección de Basura</h3><p>Gestión automática de memoria, eliminando errores de punteros</p></div>
+        <div class="feature-box"><h3>Multihilo</h3><p>Soporte nativo para programación concurrente y paralela</p></div>
+        <div class="feature-box"><h3>Seguridad</h3><p>Sistema de seguridad robusto, ideal para aplicaciones en red</p></div>
+        <div class="feature-box"><h3>Rico Ecosistema</h3><p>Enormes bibliotecas estándar y frameworks como Spring, Hibernate</p></div>
+      </div>
+    </section>
+    <section class="card">
+      <h2>¿Para qué se usa?</h2>
+      <ul class="usage-list">
+        <li><span><strong>Aplicaciones Android:</strong> El lenguaje principal para desarrollo de apps móviles Android</span></li>
+        <li><span><strong>Aplicaciones empresariales:</strong> Sistemas bancarios, ERP, CRM en grandes corporaciones</span></li>
+        <li><span><strong>Aplicaciones web:</strong> Backends con Spring Boot, JSP, Servlets</span></li>
+        <li><span><strong>Big Data:</strong> Hadoop, Apache Spark y otros frameworks están escritos en Java</span></li>
+        <li><span><strong>Sistemas distribuidos:</strong> Microservicios, aplicaciones en la nube</span></li>
+        <li><span><strong>Videojuegos:</strong> Minecraft está escrito en Java</span></li>
+      </ul>
+    </section>
+    <section class="card">
+      <h2>Ejemplo de Código</h2>
+      <p>Un ejemplo de programación orientada a objetos con una clase simple:</p>
+      <div class="code-example">
+        <pre>
+public class Libro {
+    // Atributos privados (encapsulación)
+    private String titulo;
+    private String autor;
+    private int año;
+    
+    // Constructor
+    public Libro(String titulo, String autor, int año) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.año = año;
+    }
+    
+    // Métodos getter
+    public String getTitulo() {
+        return titulo;
+    }
+    
+    // Método para mostrar información
+    public void mostrarInfo() {
+        System.out.println("Título: " + titulo);
+        System.out.println("Autor: " + autor);
+        System.out.println("Año: " + año);
+    }
+    
+    // Método main para ejecutar
+    public static void main(String[] args) {
+        Libro miLibro = new Libro(
+            "Effective Java", 
+            "Joshua Bloch", 
+            2018
+        );
+        miLibro.mostrarInfo();
+    }
+}
+        </pre>
+      </div>
+      <div class="note-box">
+        <p><strong>Nota:</strong> Java enfatiza la programación orientada a objetos con conceptos como encapsulación (atributos privados), constructores, y métodos. Todo el código debe estar dentro de una clase, y el método main() es el punto de entrada de la aplicación.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historia de FORTRAN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-fortran">
+
+  <nav class="page-nav">
+    <div class="container-small">
+      <a href="index.html" class="back-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+        <span>Volver a la Línea del Tiempo</span>
+      </a>
+    </div>
+  </nav>
+
+  <main class="page-content container-small">
+    <div class="lang-header">
+      <div>
+        <h1>FORTRAN</h1>
+        <p>FORmula TRANslation</p>
+      </div>
+      <div class="year">1957</div>
+    </div>
+
+    <section class="card">
+      <h2>Historia</h2>
+      <p><strong>Creador:</strong> John Backus y su equipo en IBM</p>
+      <p>FORTRAN fue el primer lenguaje de programación de alto nivel ampliamente utilizado. Desarrollado en IBM durante la década de 1950, revolucionó la programación científica al permitir a los programadores escribir código que se parecía más a las fórmulas matemáticas que al código máquina.</p>
+      <p>Antes de FORTRAN, los programadores tenían que escribir en lenguaje ensamblador, un proceso tedioso y propenso a errores. FORTRAN demostró que los lenguajes de alto nivel podían generar código tan eficiente como el escrito manualmente.</p>
+    </section>
+    
+    <section class="card">
+      <h2>Características Principales</h2>
+      <div class="features-grid">
+        <div class="feature-box"><h3>Cálculos Científicos</h3><p>Diseñado específicamente para cálculos matemáticos y científicos complejos</p></div>
+        <div class="feature-box"><h3>Alto Rendimiento</h3><p>Optimizado para ejecutar operaciones numéricas de manera muy eficiente</p></div>
+        <div class="feature-box"><h3>Arreglos Multidimensionales</h3><p>Soporte nativo para matrices y arreglos, esencial para cálculos científicos</p></div>
+        <div class="feature-box"><h3>Compilación</h3><p>Primer compilador que traducía código de alto nivel a código máquina eficiente</p></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>¿Para qué se usa?</h2>
+      <ul class="usage-list">
+        <li><span><strong>Simulaciones científicas:</strong> Modelado climático, física de partículas, astrofísica</span></li>
+        <li><span><strong>Ingeniería:</strong> Análisis de elementos finitos, dinámica de fluidos computacional</span></li>
+        <li><span><strong>Computación de alto rendimiento:</strong> Supercomputadoras y cálculos masivamente paralelos</span></li>
+        <li><span><strong>Investigación académica:</strong> Todavía se usa en muchas universidades para investigación numérica</span></li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Ejemplo de Código</h2>
+      <p>Un programa simple que calcula el área de un círculo:</p>
+      <div class="code-example">
+        <pre>
+  PROGRAM AreaCirculo
+  REAL radio, area, pi
+  PARAMETER (pi = 3.14159)
+  
+  PRINT *, 'Ingrese el radio del círculo:'
+  READ *, radio
+  
+  area = pi * radio * radio
+  
+  PRINT *, 'El área es:', area
+  
+  END PROGRAM AreaCirculo
+        </pre>
+      </div>
+      <div class="note-box">
+        <p><strong>Nota:</strong> Observe cómo las instrucciones están estructuradas en columnas fijas, una característica heredada de las tarjetas perforadas de la época.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
