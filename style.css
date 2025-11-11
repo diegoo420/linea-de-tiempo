@@ -1,6 +1,5 @@
-/* --- INICIO: ESTILOS CSS --- */
 
-/* 1. Reset Básico y Estilos Globales */
+/* Estilos Globales */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -28,17 +27,18 @@ h4 { font-size: 1.1rem; font-weight: 600; }
 p { margin-bottom: 1rem; }
 a { text-decoration: none; }
 
+
 /* 2. Clases de Utilidad (Contenedores) */
 .container {
-  max-width: 72rem; /* 1152px */
+  max-width: 72rem; 
   margin-left: auto;
   margin-right: auto;
-  padding-left: 1.5rem;  /* 24px */
-  padding-right: 1.5rem; /* 24px */
+  padding-left: 1.5rem;  
+  padding-right: 1.5rem; 
 }
 
 .container-small {
-  max-width: 56rem; /* 896px */
+  max-width: 56rem; 
   margin-left: auto;
   margin-right: auto;
   padding-left: 1.5rem;
@@ -47,10 +47,10 @@ a { text-decoration: none; }
 
 .card {
   background-color: #ffffff;
-  border-radius: 0.75rem; /* 12px */
+  border-radius: 0.75rem; 
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-  padding: 2rem; /* 32px */
-  margin-bottom: 2rem; /* 32px */
+  padding: 2rem; 
+  margin-bottom: 2rem; 
 }
 
 .button-link {
@@ -66,7 +66,8 @@ a { text-decoration: none; }
   color: #1d4ed8;
 }
 
-/* 3. Estilos de la Vista "Home" */
+
+/* 3. Estilos de la Vista index */
 .home-header {
   text-align: center;
   padding: 3rem 1.5rem;
@@ -75,7 +76,7 @@ a { text-decoration: none; }
   margin-bottom: 1rem;
 }
 .home-header p {
-  max-width: 48rem; /* 768px */
+  max-width: 48rem; 
   margin: 0 auto;
   color: #475569;
   font-size: 1.1rem;
@@ -86,13 +87,13 @@ a { text-decoration: none; }
   padding-bottom: 5rem;
 }
 
-/* La línea del tiempo (solo visible en escritorio) */
+/* La línea del tiempo (solo visible en index */
 .timeline-line {
   display: none;
   position: absolute;
   left: 0;
   right: 0;
-  top: 5rem; /* Altura del círculo / 2 */
+  top: 5rem; 
   height: 4px;
   background: linear-gradient(to right, #d1d5db, #60a5fa, #2dd4bf);
   transform: translateY(-50%);
@@ -114,9 +115,9 @@ a { text-decoration: none; }
 }
 
 .timeline-circle {
-  width: 10rem; /* 160px */
-  height: 10rem; /* 160px */
-  border-radius: 9999px; /* fully rounded */
+  width: 10rem; 
+  height: 10rem; 
+  border-radius: 9999px; 
   border: 4px solid white;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
   display: flex;
@@ -125,7 +126,7 @@ a { text-decoration: none; }
   margin-bottom: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  color: white; /* El color se hereda al 'a' */
+  color: white; 
 }
 .timeline-circle:hover {
   transform: scale(1.1);
@@ -190,6 +191,7 @@ a { text-decoration: none; }
   margin-bottom: 0;
   font-size: 0.9rem;
 }
+
 
 /* 4. Estilos de la Vista "Páginas" */
 .page-nav {
@@ -305,6 +307,7 @@ a { text-decoration: none; }
   border-radius: 0.25rem;
   border-left-width: 4px;
 }
+
 
 /* 5. Estilos Específicos por Lenguaje */
 
