@@ -76,8 +76,45 @@
         <p><strong>Nota:</strong> Observe cómo las instrucciones están estructuradas en columnas fijas, una característica heredada de las tarjetas perforadas de la época.</p>
       </div>
     </section>
-  </main>
+    <section class="card">
+      <h2>Ponte a prueba!!</h2>
+      <p>
+        Basado en el ejemplo de arriba, escribe el codigo para imprimir <strong>"Hola, Mundo"</strong> en la consola.
+      </p>
+      <div class="code-challenge-area">
+        <textarea id="code-challenge-input" class="code-challenge-input" rows="3" placeholder="Escribe tu código de Python aqui..."></textarea>
+      </div>
+      <button id="check-code-btn" class="welcome-button">
+        Revisar mi código
+      </button>
 
-  <script src="js/script.js"></script>
+      <div id="feedback-message" class="feedback-box"></div>
+    </section>
+  </main>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const checkButton = document.getElementById('check-code-btn');
+      const codeInput = document.getElementById('code-challenge-input');
+      const feedbackMessage = document.getElementById('feedback-message');
+
+      const correctAnswers = [
+        "PRINT *, 'Hola, Mundo'",
+        'PRINT *, "Hola, Mundo"'
+      ];
+
+      checkButton.addEventListener('click', () => {
+        const userCode = codeInput.value.trim(); 
+
+        if (correctAnswers.includes(userCode)) {
+          feedbackMessage.textContent = '¡Correcto! Muy bien.';
+          feedbackMessage.className = 'feedback-box correct';
+        } else {
+          feedbackMessage.textContent = 'Respuesta incorrecta. ¡Inténtalo de nuevo! Revisa la sintaxis (PRINT *, ...)';
+          feedbackMessage.className = 'feedback-box incorrect';
+        }
+      });
+    });
+  </script>
 </body>
 </html>

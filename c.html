@@ -84,8 +84,53 @@ int main() {
         <p><strong>Nota:</strong> C introduce conceptos como punteros que permiten un control directo sobre la memoria, algo fundamental en programación de sistemas pero que requiere cuidado por parte del programador.</p>
       </div>
     </section>
-  </main>
+    <section class="card">
+      <h2>Ponte a prueba!!</h2>
+      <p>
+        Basado en el ejemplo de arriba, escribe el codigo para imprimir el resultado de <strong>2*2</strong> en la consola.
+      </p>
+      <div class="code-challenge-area">
+        <textarea id="code-challenge-input" class="code-challenge-input" rows="3" placeholder="Escribe tu código de Python aqui..."></textarea>
+      </div>
+      <button id="check-code-btn" class="welcome-button">
+        Revisar mi código
+      </button>
 
-  <script src="js/script.js"></script>
+      <div id="feedback-message" class="feedback-box"></div>
+    </section>
+  </main>
+  <script>
+      document.addEventListener('DOMContentLoaded', () => {
+      
+      // Encuentra los 3 elementos que necesitamos
+      const checkButton = document.getElementById('check-code-btn');
+      const codeInput = document.getElementById('code-challenge-input');
+      const feedbackMessage = document.getElementById('feedback-message');
+
+      // Define la respuesta correcta (o varias, por si usan comillas simples)
+      const correctAnswers = [
+        'printf("4");',
+        'printf("%d", 4);',
+        'printf("%d", 2*2);',
+        'printf("%i", 2*2);'
+      ];
+
+      // Añade un escuchador al botón de clic
+      checkButton.addEventListener('click', () => {
+        const userCode = codeInput.value.trim(); 
+
+        // Comprueba si el texto del usuario está en nuestra lista de respuestas
+        if (correctAnswers.includes(userCode)) {
+          // Éxito
+          feedbackMessage.textContent = '¡Correcto!.';
+          feedbackMessage.className = 'feedback-box correct';
+        } else {
+          // Error
+          feedbackMessage.textContent = 'Respuesta incorrecta. ¡Inténtalo de nuevo!';
+          feedbackMessage.className = 'feedback-box incorrect';
+        }
+      });
+    });
+  </script>
 </body>
 </html>

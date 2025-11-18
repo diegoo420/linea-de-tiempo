@@ -81,8 +81,52 @@ print(f"Cuadrados: {cuadrados}")
         <p><strong>Nota:</strong> Observe cómo Python usa indentación en lugar de llaves para definir bloques de código, lo que hace que el código sea más limpio y legible. Las comprehensions de listas son una característica única que permite crear listas de forma concisa y expresiva.</p>
       </div>
     </section>
+    <section class="card">
+      <h2>Ponte a prueba!!</h2>
+      <p>
+        Basado en el ejemplo de arriba, escribe el codigo para imprimir <strong>"Hola, Mundo"</strong> en la consola.
+      </p>
+      <div class="code-challenge-area">
+        <textarea id="code-challenge-input" class="code-challenge-input" rows="3" placeholder="Escribe tu código de Python aqui..."></textarea>
+      </div>
+      <button id="check-code-btn" class="welcome-button">
+        Revisar mi código
+      </button>
+
+      <div id="feedback-message" class="feedback-box"></div>
+    </section>
   </main>
 
-  <script src="js/script.js"></script>
+  <script>
+  document.addEventListener('DOMContentLoaded', () => {
+      
+      // Encuentra los 3 elementos que necesitamos
+      const checkButton = document.getElementById('check-code-btn');
+      const codeInput = document.getElementById('code-challenge-input');
+      const feedbackMessage = document.getElementById('feedback-message');
+
+      // Define la respuesta correcta (o varias, por si usan comillas simples)
+      const correctAnswers = [
+        'print("Hola, Mundo")',
+        "print('Hola, Mundo')"
+      ];
+
+      // Añade un "escuchador" al botón de clic
+      checkButton.addEventListener('click', () => {
+        const userCode = codeInput.value.trim(); // Obtiene y limpia el texto del usuario
+
+        // Comprueba si el texto del usuario está en nuestra lista de respuestas
+        if (correctAnswers.includes(userCode)) {
+          // Éxito
+          feedbackMessage.textContent = '¡Correcto!.';
+          feedbackMessage.className = 'feedback-box correct';
+        } else {
+          // Error
+          feedbackMessage.textContent = 'Respuesta incorrecta. ¡Inténtalo de nuevo! Revisa mayúsculas, minúsculas y paréntesis.';
+          feedbackMessage.className = 'feedback-box incorrect';
+        }
+      });
+    });
+    </script>
 </body>
 </html>

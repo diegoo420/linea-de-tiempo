@@ -94,8 +94,46 @@ async function obtenerDatos() {
         <p><strong>Nota:</strong> JavaScript moderno (ES6+) incluye características como arrow functions, destructuring, template literals, y async/await que hacen el código más limpio y expresivo. La capacidad de manipular el DOM (Document Object Model) es lo que permite la interactividad en las páginas web.</p>
       </div>
     </section>
+    <section class="card">
+      <h2>Ponte a prueba!!</h2>
+      <p>
+        Basado en el ejemplo de arriba, escribe el codigo para imprimir <strong>"Hola, Mundo"</strong> en la consola.
+      </p>
+      <div class="code-challenge-area">
+        <textarea id="code-challenge-input" class="code-challenge-input" rows="3" placeholder="Escribe tu código de Python aqui..."></textarea>
+      </div>
+      <button id="check-code-btn" class="welcome-button">
+        Revisar mi código
+      </button>
+
+      <div id="feedback-message" class="feedback-box"></div>
+    </section>
   </main>
 
-  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const checkButton = document.getElementById('check-code-btn');
+      const codeInput = document.getElementById('code-challenge-input');
+      const feedbackMessage = document.getElementById('feedback-message');
+
+      const correctAnswers = [
+        'console.log("Hola, Mundo");',
+        "console.log('Hola, Mundo');"
+      ];
+
+      checkButton.addEventListener('click', () => {
+        const userCode = codeInput.value.trim(); 
+
+        if (correctAnswers.includes(userCode)) {
+          feedbackMessage.textContent = '¡Correcto! Excelente.';
+          feedbackMessage.className = 'feedback-box correct';
+        } else {
+          feedbackMessage.textContent = 'Respuesta incorrecta. ¡Inténtalo de nuevo! Revisa los paréntesis y el punto y coma.';
+          feedbackMessage.className = 'feedback-box incorrect';
+        }
+      });
+    });
+  </script>
 </body>
 </html>

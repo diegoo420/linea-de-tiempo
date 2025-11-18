@@ -101,8 +101,45 @@ public class Libro {
         <p><strong>Nota:</strong> Java enfatiza la programación orientada a objetos con conceptos como encapsulación (atributos privados), constructores, y métodos. Todo el código debe estar dentro de una clase, y el método main() es el punto de entrada de la aplicación.</p>
       </div>
     </section>
+    <section class="card">
+      <h2>Ponte a prueba!!</h2>
+      <p>
+        Basado en el ejemplo de arriba, escribe el codigo para imprimir <strong>"Hola, Mundo"</strong> en la consola.
+      </p>
+      <div class="code-challenge-area">
+        <textarea id="code-challenge-input" class="code-challenge-input" rows="3" placeholder="Escribe tu código de Python aqui..."></textarea>
+      </div>
+      <button id="check-code-btn" class="welcome-button">
+        Revisar mi código
+      </button>
+
+      <div id="feedback-message" class="feedback-box"></div>
+    </section>
   </main>
 
-  <script src="js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      
+      const checkButton = document.getElementById('check-code-btn');
+      const codeInput = document.getElementById('code-challenge-input');
+      const feedbackMessage = document.getElementById('feedback-message');
+
+      const correctAnswers = [
+        'System.out.println("Hola, Mundo");'
+      ];
+
+      checkButton.addEventListener('click', () => {
+        const userCode = codeInput.value.trim(); 
+
+        if (correctAnswers.includes(userCode)) {
+          feedbackMessage.textContent = '¡Correcto!';
+          feedbackMessage.className = 'feedback-box correct';
+        } else {
+          feedbackMessage.textContent = 'Respuesta incorrecta. ¡Inténtalo de nuevo! Java distingue mayúsculas de minúsculas.';
+          feedbackMessage.className = 'feedback-box incorrect';
+        }
+      });
+    });
+  </script>
 </body>
 </html>

@@ -9,7 +9,7 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  background: linear-gradient(to bottom right, #f8fafc, #e0f2fe);
+  background: #F8F9FA;
   color: #334155;
   min-height: 100vh;
 }
@@ -56,7 +56,7 @@ a { text-decoration: none; }
 
 .button-link-fortran {
   display: inline-block;
-  background-color: #5a3f75;
+  background-color: #5B21B6;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -70,13 +70,13 @@ a { text-decoration: none; }
   transition: background-color 0.2s ease-in-out;
 }
 .button-link-fortran:hover{
-  background-color: #423054;
+  background-color: #4C1D95;
   color: #ffffff;
 }
 
 .button-link-c {
   display: inline-block;
-  background-color: #2C5282;
+  background-color: #2563EB;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -90,13 +90,13 @@ a { text-decoration: none; }
   transition: background-color 0.2s ease-in-out;
 }
 .button-link-c:hover{
-  background-color: #1e3857;
+  background-color: #1D4ED8;
   color: #ffffff;
 }
 
 .button-link-python {
   display: inline-block;
-  background-color: #2D3748;
+  background-color: #0D9488;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -110,13 +110,13 @@ a { text-decoration: none; }
   transition: background-color 0.2s ease-in-out;
 }
 .button-link-python:hover{
-  background-color: #1c222c;
+  background-color: #0F766E;
   color: #ffffff;
 }
 
 .button-link-java {
   display: inline-block;
-  background-color: #1A365D;
+  background-color: #F59E0B;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -130,13 +130,13 @@ a { text-decoration: none; }
   transition: background-color 0.2s ease-in-out;
 }
 .button-link-java:hover{
-  background-color: #11233c;
+  background-color: #D97706;
   color: #ffffff;
 }
 
 .button-link-javascript {
   display: inline-block;
-  background-color: #c1a722;
+  background-color: #EAB308;
   color: #ffffff;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
@@ -150,13 +150,14 @@ a { text-decoration: none; }
   transition: background-color 0.2s ease-in-out;
 }
 .button-link-javascript:hover{
-  background-color: #8f7b1a;
+  background-color: #CA8A04;
   color: #ffffff;
 }
 
 
 /* 3. Estilos de la Vista index */
 .home-header {
+  position: relative;
   text-align: center;
   padding: 3rem 1.5rem;
 }
@@ -175,7 +176,6 @@ a { text-decoration: none; }
   padding-bottom: 5rem;
 }
 
-/* La línea del tiempo (solo visible en index */
 .timeline-line {
   display: none;
   position: absolute;
@@ -240,7 +240,7 @@ a { text-decoration: none; }
 }
 
 .timeline-card {
-  display: block; /* Convertido en bloque para el 'a' tag */
+  display: block; 
   background: white;
   border-radius: 0.5rem;
   padding: 1.5rem;
@@ -295,7 +295,7 @@ a { text-decoration: none; }
 }
 
 
-/* 4. Estilos de la Vista "Páginas" */
+/* 4. Estilos de la Vista  */
 .page-nav {
   background-color: white;
   padding: 1.5rem 1rem;
@@ -414,38 +414,39 @@ a { text-decoration: none; }
 /* 5. Estilos Específicos por Lenguaje */
 
 /* FORTRAN */
-#page-fortran .lang-header { background: linear-gradient(to right, #5a3f75, #835cab); }
-#page-fortran .feature-box { border-color: #4a5568; }
-#page-fortran .usage-list li::before { color: #4a5568; }
-#page-fortran .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+/* FORTRAN */
+#page-fortran .lang-header { background: linear-gradient(to right, #5B21B6, #7C3AED); }
+#page-fortran .feature-box { border-color: #5B21B6; }
+#page-fortran .usage-list li::before { color: #5B21B6; }
+#page-fortran .note-box { border-color: #5B21B6; background-color: #f5f3ff; }
 
 /* C */
-#page-c .lang-header { background: linear-gradient(to right, #2C5282, rgb(39, 75, 173)); }
-#page-c .feature-box { border-color: #3b82f6; }
-#page-c .usage-list li::before { color: #3b82f6; }
-#page-c .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+#page-c .lang-header { background: linear-gradient(to right, #2563EB, #3B82F6); }
+#page-c .feature-box { border-color: #2563EB; }
+#page-c .usage-list li::before { color: #2563EB; }
+#page-c .note-box { border-color: #2563EB; background-color: #eff6ff; }
 
 /* Python */
-#page-python .lang-header { background: linear-gradient(to right, #1e293b ,#475569); }
-#page-python .feature-box { border-color: #475569; }
-#page-python .usage-list li::before { color: #475569; }
-#page-python .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+#page-python .lang-header { background: linear-gradient(to right, #0D9488, #14B8A6); }
+#page-python .feature-box { border-color: #0D9488; }
+#page-python .usage-list li::before { color: #0D9488; }
+#page-python .note-box { border-color: #0D9488; background-color: #f0fdfa; }
 
 /* Java */
-#page-java .lang-header { background: linear-gradient(to right, #1A365D, #2d5d9f); }
-#page-java .feature-box { border-color: #1d4ed8; }
-#page-java .usage-list li::before { color: #1d4ed8; }
-#page-java .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+#page-java .lang-header { background: linear-gradient(to right, #F59E0B, #FBBF24); }
+#page-java .feature-box { border-color: #F59E0B; }
+#page-java .usage-list li::before { color: #F59E0B; }
+#page-java .note-box { border-color: #F59E0B; background-color: #fffbeb; }
 
 /* JavaScript */
-#page-javascript .lang-header { background: linear-gradient(to right, #c1a722, #ffdb25); }
-#page-javascript .feature-box { border-color: #0d9488; }
-#page-javascript .usage-list li::before { color: #0d9488; }
-#page-javascript .note-box { border-color: #60a5fa; background-color: #eff6ff; }
+#page-javascript .lang-header { background: linear-gradient(to right, #EAB308, #FACC15); }
+#page-javascript .feature-box { border-color: #EAB308; }
+#page-javascript .usage-list li::before { color: #EAB308; }
+#page-javascript .note-box { border-color: #EAB308; background-color: #fefce8; }
 
 
-/* 6. Media Queries (Responsivo) */
-@media (min-width: 768px) { /* md */
+/* 6. Media Queries  */
+@media (min-width: 768px) { 
   .timeline-line {
     display: block;
   }
@@ -474,11 +475,11 @@ a { text-decoration: none; }
 
 .welcome-card {
   background-color: #ffffff;
-  border-radius: 0.75rem; /* 12px */
+  border-radius: 0.75rem; 
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
-  padding: 2.5rem; /* 40px */
-  max-width: 48rem; /* 768px */
-  margin: 0 auto; /* Centra la tarjeta */
+  padding: 2.5rem; 
+  max-width: 48rem; 
+  margin: 0 auto; 
   text-align: center;
 }
 
@@ -497,7 +498,7 @@ a { text-decoration: none; }
 
 .welcome-button {
   display: inline-block;
-  background-color: #f6d235; 
+  background-color: #0d9488; 
   color: #ffffff;
   padding: 0.75rem 1.5rem; 
   border-radius: 0.375rem; 
@@ -511,8 +512,8 @@ a { text-decoration: none; }
 }
 
 .welcome-button:hover {
-  background-color: #ccae27; 
-  box-shadow: 0 4px 12px #f9d222;
+  background-color: #0a6b63; 
+  box-shadow: 0 4px 12px #0a6b63;
   transform: translateY(-3px);
 }
 
@@ -524,32 +525,29 @@ a { text-decoration: none; }
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
 }
 
-back-to-welcome-button {
-  /* Posicionamiento */
+.back-to-welcome-button {
   position: absolute;
   top: 1rem;
   left: 1rem;
-
-  /* Estilos del botón (similar a .back-button) */
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #475569;
+  color: #0d9488;
   font-size: 1rem;
   font-weight: 500;
-  background: #ffffff; /* Fondo blanco */
-  border: 1px solid #e5e7eb; /* Borde sutil */
+  background: #F8F9FA; 
+  border: 1px solid F8F9FA;
   cursor: pointer;
   padding: 0.5rem 1rem;
-  border-radius: 0.375rem; /* Esquinas redondeadas */
+  border-radius: 0.375rem; 
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
   transition: all 0.2s ease-in-out;
-  text-decoration: none; /* Asegura que no tenga subrayado */
+  text-decoration: none; 
 }
 
 .back-to-welcome-button:hover {
-  color: #1e293b;
-  background-color: #f8fafc; /* Color de fondo ligero al pasar el ratón */
+  color: #0d9488;
+  background-color: #e6f5f4;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
 }
 
@@ -561,8 +559,89 @@ back-to-welcome-button {
 /* Media query para centrar el botón en pantallas pequeñas */
 @media (max-width: 768px) {
   .back-to-welcome-button {
-    position: static; /* Quita el posicionamiento absoluto */
-    display: inline-flex; /* Lo hace de bloque pero flexible */
-    margin-bottom: 2rem; /* Lo separa del título */
+    position: static; 
+    display: inline-flex; 
+    margin-bottom: 2rem; 
   }
+}
+
+.modal-header {
+  background-color: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+}
+.modal-title {
+  color: #1e293b;
+  font-weight: 600;
+}
+.modal-body .list-group-item {
+  font-size: 1.1rem;
+  color: #334155;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 1px solid #f1f5f9;
+}
+.modal-body .list-group-item:last-child {
+  border-bottom: none;
+}
+
+#btn-integrantes {
+  background-color: #0d9488; 
+  border-color: #0d9488;     
+  color: #ffffff;            
+}
+#btn-integrantes:hover {
+  background-color: #0a7066; 
+  border-color: #0a7066;     
+  color: #ffffff;            
+}
+
+.code-challenge-input {
+  background-color: #1e293b;
+  color: #93c5fd;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  border: 2px solid #334155;
+  transition: border-color 0.2s;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.code-challenge-input:focus {
+  outline: none;
+  border-color: #2563EB; 
+}
+
+/* Base para la caja de retroalimentación */
+.feedback-box {
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.375rem;
+  font-weight: 500;
+  display: none; 
+}
+
+/* Estilo para respuesta correcta */
+.feedback-box.correct {
+  display: block;
+  background-color: #f0fdfa; 
+  color: #0F766E;
+  border: 1px solid #0D9488;
+}
+
+/* Estilo para respuesta incorrecta */
+.feedback-box.incorrect {
+  display: block;
+  background-color: #fef2f2; 
+  color: #B91C1C;
+  border: 1px solid #E11D48;
+}
+
+.welcome-header-button {
+  position: fixed; 
+  top: 1.5rem;    
+  right: 1.5rem;  
+  z-index: 1050; 
 }
